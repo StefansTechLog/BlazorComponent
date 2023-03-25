@@ -1,0 +1,27 @@
+﻿<h3>DemoComponents</h3>
+@*
+    First add script ref to index.html
+*@
+
+<label>Max data points</label>
+<input type="number" @bind-value="@MaxDataPoints" />
+<button @onclick="UpdateMaxDataPoints">Set max data points</button>
+<br />
+
+<label>Rerender frequency</label>
+<input type="number" @bind-value="@RerenderFrequency" />
+<button @onclick="UpdateRerenderFrequency">Set rerender frequency</button>
+<br />
+
+<button @onclick="StartStream">Start data stream</button>
+<button @onclick="StopStream">Stop data stream</button>
+<button @onclick="ResetStream">Reset chart</button>
+
+
+<div style="width:1000px">
+    <canvas id="demo-chart"></canvas>
+</div>
+
+
+
+

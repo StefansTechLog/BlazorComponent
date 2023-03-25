@@ -1,14 +1,31 @@
-<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
-  <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.3" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.3" PrivateAssets="all" />
-  </ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.3" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.3" PrivateAssets="all" />
+	</ItemGroup>
+
+	<!--<Target Name="CopyScopedJavascript" BeforeTargets="RenameJavascriptModules">
+		<ItemGroup>
+			<MySourceFiles Include="**\*.razor.js" />
+		</ItemGroup>
+		<Message Text="scoped javascript files: @(MySourceFiles)" />
+		<Copy SourceFiles="@(MySourceFiles)" DestinationFiles="$(ProjectDir)\wwwroot\js\%(Filename).js" />
+	</Target>
+	
+	<Target Name="RenameJavascriptModules" BeforeTargets="Build">
+		<ItemGroup>
+			<RenameFile Include="wwwroot\js\*.razor.js" />
+		</ItemGroup>
+		<Message Text="Move: @(RenameFile) -> @(RenameFile -> Replace('.razor', ''))" Importance="High" />
+		<Move SourceFiles="@(RenameFile)" DestinationFiles="@(RenameFile -> Replace('.razor', ''))" />
+	</Target>-->
 
 </Project>
