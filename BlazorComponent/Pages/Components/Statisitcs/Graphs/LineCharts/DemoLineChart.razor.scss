@@ -1,0 +1,42 @@
+﻿@use "sass:math";
+
+@import "../../../../../wwwroot/sass/_colors.scss";
+@import "../../../../../wwwroot/sass/_mixins.scss";
+
+.start-btn {
+    @include bigElement($green);
+}
+
+.stop-btn {
+    @include mediumElement($yellow);
+}
+
+.reset-btn {
+    @include smallElement($red);
+    color: $white;
+}
+
+%neutral-btn {
+    @include mediumElement($blue);
+    color: $white;
+}
+
+.set-value-btn {
+    @extend %neutral-btn;
+}
+
+%input-field {
+    border-radius: 50px;
+    height: 30px;
+    font-size: 13px;
+    padding: 0px 10px;
+    margin: 10px 0px;
+}
+
+input[type="number"] {
+    @extend %input-field;
+}
+
+.chart-container {
+    width: math.div(1500px, 3px) * 2px;
+}

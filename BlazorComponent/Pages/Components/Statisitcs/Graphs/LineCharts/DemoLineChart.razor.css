@@ -1,0 +1,37 @@
+.start-btn {
+    height: 50px;
+    font-size: 16px;
+    background-color: rgba(0,128,0,.9215686275)
+}
+
+.stop-btn {
+    height: 30px;
+    font-size: 13px;
+    background-color: #ffdd1f
+}
+
+.reset-btn {
+    height: 20px;
+    font-size: 10px;
+    background-color: #850000;
+    color: #fff
+}
+
+.set-value-btn {
+    height: 30px;
+    font-size: 13px;
+    background-color: #0e0eff;
+    color: #fff
+}
+
+input[type=number] {
+    border-radius: 50px;
+    height: 30px;
+    font-size: 13px;
+    padding: 0px 10px;
+    margin: 10px 0px
+}
+
+.chart-container {
+    width: 1000px
+}

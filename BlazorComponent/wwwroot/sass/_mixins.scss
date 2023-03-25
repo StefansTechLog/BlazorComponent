@@ -1,0 +1,18 @@
+﻿
+@mixin bigElement($btnColor) {
+    height: 50px;
+    font-size: 16px;
+    background-color: $btnColor;
+}
+
+@mixin mediumElement($btnColor) {
+    height: 30px;
+    font-size: 13px;
+    background-color: $btnColor;
+}
+
+@mixin smallElement($btnColor) {
+    height: 20px;
+    font-size: 10px;
+    background-color: $btnColor;
+}
