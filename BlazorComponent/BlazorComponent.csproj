@@ -12,7 +12,7 @@
 		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.3" PrivateAssets="all" />
 	</ItemGroup>
 
-	<!--<Target Name="CopyScopedJavascript" BeforeTargets="RenameJavascriptModules">
+	<Target Name="CopyScopedJavascript" BeforeTargets="RenameJavascriptModules">
 		<ItemGroup>
 			<MySourceFiles Include="**\*.razor.js" />
 		</ItemGroup>
@@ -26,6 +26,6 @@
 		</ItemGroup>
 		<Message Text="Move: @(RenameFile) -> @(RenameFile -> Replace('.razor', ''))" Importance="High" />
 		<Move SourceFiles="@(RenameFile)" DestinationFiles="@(RenameFile -> Replace('.razor', ''))" />
-	</Target>-->
+	</Target>
 
 </Project>

@@ -19,7 +19,8 @@ namespace BlazorComponent.Pages.Components.Statisitcs.Graphs.LineCharts
 
         protected override async Task OnInitializedAsync()
         {
-            JsModule = await JSRuntime!.InvokeAsync<IJSObjectReference>("import", "/Pages/Components/Statisitcs/Graphs/LineCharts/DemoLineChart.razor.js");
+            //JsModule = await JSRuntime!.InvokeAsync<IJSObjectReference>("import", "/Pages/Components/Statisitcs/Graphs/LineCharts/DemoLineChart.razor.js");
+            JsModule = await JSRuntime!.InvokeAsync<IJSObjectReference>("import", $"/js/{nameof(DemoLineChart)}.js");
             await JsModule!.InvokeVoidAsync("InitializeChart", RerenderFrequency, MaxDataPoints);
         }
 
@@ -27,6 +28,7 @@ namespace BlazorComponent.Pages.Components.Statisitcs.Graphs.LineCharts
         {
             await JsModule!.InvokeVoidAsync("UpdateMaxDataPoints", MaxDataPoints);
         }
+
         private async Task UpdateRerenderFrequency()
         {
             await JsModule!.InvokeVoidAsync("UpdateRerenderFrequency", RerenderFrequency);
@@ -38,7 +40,7 @@ namespace BlazorComponent.Pages.Components.Statisitcs.Graphs.LineCharts
             while (!CancellationTokenSource!.IsCancellationRequested)
             {
                 await JsModule!.InvokeVoidAsync("AddDataPoint", x++, Random.Shared.Next(130, 140));
-                await Task.Delay(10);
+                await Task.Delay(1);
             }
         }
 
@@ -52,7 +54,5 @@ namespace BlazorComponent.Pages.Components.Statisitcs.Graphs.LineCharts
             CancellationTokenSource?.Cancel();
             await JsModule!.InvokeVoidAsync("ResetDataPoints");
         }
-
-
     }
 }
