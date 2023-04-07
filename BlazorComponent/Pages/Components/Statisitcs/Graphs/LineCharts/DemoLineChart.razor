@@ -1,22 +1,23 @@
 ﻿<h3>DemoComponents</h3>
+<div class="demo-component">
+    <label>Max data points</label>
+    <input type="number" @bind-value="@MaxDataPoints" />
+    <button class="set-value-btn" @onclick="UpdateMaxDataPoints">Set max data points</button>
+    <br />
 
-<label>Max data points</label>
-<input type="number" @bind-value="@MaxDataPoints" />
-<button class="set-value-btn" @onclick="UpdateMaxDataPoints">Set max data points</button>
-<br />
+    <label>Rerender frequency</label>
+    <input type="number" @bind-value="@RerenderFrequency" />
+    <button class="set-value-btn" @onclick="UpdateRerenderFrequency">Set rerender frequency</button>
+    <br />
 
-<label>Rerender frequency</label>
-<input type="number" @bind-value="@RerenderFrequency" />
-<button class="set-value-btn" @onclick="UpdateRerenderFrequency">Set rerender frequency</button>
-<br />
-
-<button class="start-btn" @onclick="StartStream">Start data stream</button>
-<button class="stop-btn" @onclick="StopStream">Stop data stream</button>
-<button class="reset-btn" @onclick="ResetStream">Reset chart</button>
+    <button class="start-btn" @onclick="StartStream">Start data stream</button>
+    <button class="stop-btn" @onclick="StopStream">Stop data stream</button>
+    <button class="reset-btn" @onclick="ResetStream">Reset chart</button>
 
 
-<div class="chart-container">
-    <canvas class="demo-chart" id="demo-chart"></canvas>
+    <div class="chart-container">
+        <canvas class="demo-chart" id="demo-chart"></canvas>
+    </div>
 </div>
 
 

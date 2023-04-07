@@ -3,40 +3,43 @@
 @import "../../../../../wwwroot/sass/_colors.scss";
 @import "../../../../../wwwroot/sass/_mixins.scss";
 
-.start-btn {
-    @include bigElement($green);
-}
+.demo-component {
 
-.stop-btn {
-    @include mediumElement($yellow);
-}
+    .start-btn {
+        @include bigElement($green);
+    }
 
-.reset-btn {
-    @include smallElement($red);
-    color: $white;
-}
+    .stop-btn {
+        @include mediumElement($yellow);
+    }
 
-%neutral-btn {
-    @include mediumElement($blue);
-    color: $white;
-}
+    .reset-btn {
+        @include smallElement($red);
+        color: $white;
+    }
 
-.set-value-btn {
-    @extend %neutral-btn;
-}
+    %neutral-btn {
+        @include mediumElement($blue);
+        color: $white;
+    }
 
-%input-field {
-    border-radius: 50px;
-    height: 30px;
-    font-size: 13px;
-    padding: 0px 10px;
-    margin: 10px 0px;
-}
+    .set-value-btn {
+        @extend %neutral-btn;
+    }
 
-input[type="number"] {
-    @extend %input-field;
-}
+    %input-field {
+        border-radius: 50px;
+        height: 30px;
+        font-size: 13px;
+        padding: 0px 10px;
+        margin: 10px 0px;
+    }
 
-.chart-container {
-    width: math.div(1500px, 3px) * 2px;
+    input[type="number"] {
+        @extend %input-field;
+    }
+
+    .chart-container {
+        width: math.div(1500px, 3px) * 2px;
+    }
 }
